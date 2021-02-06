@@ -6,8 +6,8 @@
 ## 使用項目
 
 * Bootstrap - 製作簡易的介面
-* [Node.js] - 使用node.js執行本機伺服器
-* [Express] - 使用Express框架
+* Node.js - 使用node.js執行本機伺服器
+* Express - 使用Express框架
 * MongoDB - 資料庫系統
 * Mongooes -與MongoDB一起使用連結網頁
 * Passport-驗證系統
