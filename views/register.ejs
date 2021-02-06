@@ -1,0 +1,101 @@
+<%- include ("partials/header") %>
+<body class="d-flex h-100 text-center text-white bg-dark">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+      <div>
+        <h3 class="float-md-start mb-0">系統練習</h3>
+        <nav class="nav nav-masthead justify-content-center float-md-end">
+          <a class="nav-link" href="/">主頁面</a>
+          <a class="nav-link" href="/login">登入頁面</a>
+          <a class="nav-link active" aria-current="page" href="/"
+            >註冊頁面</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <form method="POST" action="register">
+      <%- include ("partials/message") %>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="floatingInput"
+          name="fullname"
+          placeholder="Full Name"
+          required
+          minlength="3"
+          maxlength="50"
+        />
+        <label for="floatingInput" style="color: black">您的名稱</label>
+      </div>
+      <select
+        class="form-select"
+        aria-label="Default select example"
+        name="usertype"
+        required
+      >
+        <option selected value="">選擇類型</option>
+        <option value="Student">獵人</option>
+      </select>
+      <br />
+      <div class="form-floating mb-3">
+        <input
+          type="email"
+          class="form-control"
+          id="floatingInput"
+          placeholder="name@example.com"
+          name="username"
+          required
+        />
+        <label for="floatingInput" style="color: black">Email信箱</label>
+      </div>
+      <div class="form-floating">
+        <input
+          type="password"
+          class="form-control"
+          id="floatingPassword"
+          placeholder="Password"
+          name="password"
+          required
+          minlength="6"
+          maxlength="25"
+        />
+        <label for="floatingPassword" style="color: black">Password</label>
+      </div>
+      <br />
+      <div class="form-floating">
+        <input
+          type="password"
+          class="form-control"
+          id="floatingPassword"
+          placeholder="Password Again"
+          name="password2"
+          required
+          minlength="6"
+          maxlength="25"
+        />
+        <label for="floatingPassword" style="color: black"
+          >Password Again</label
+        >
+      </div>
+      <br />
+      <button type="submit" class="btn btn-primary">送出</button>
+    </form>
+
+    <p>
+      已經擁有帳戶?
+      <a href="/login" style="color: rgb(113, 227, 255); text-decoration: none"
+        >登入頁面.</a
+      >
+    </p>
+
+    <footer class="mt-auto text-white-50">
+      <p>
+        Cover template for
+        <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by
+        <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.
+      </p>
+    </footer>
+  </div>
+</body>
